@@ -31,7 +31,7 @@ html, body {
 
 .logo-image {
     position: absolute;
-    max-width: 10rem;
+    max-width: 100px;
     top: 1rem;
     left: 1rem;
     object-fit: contain;
@@ -118,10 +118,14 @@ html, body {
 
 .countdown-item {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5rem;
     font-weight: bold;
     color: #D51C11;
     text-shadow: 2px 0 0 #FFFFFF, -2px 0 0 #FFFFFF, 0 2px 0 #FFFFFF, 0 -2px 0 #FFFFFF, 1px 1px #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF;
+}
+
+.countdown-item#cd-hour,
+.countdown-item#cd-minute {
+    transform: translateX(-15%);
 }
 
 /* --- */
@@ -188,7 +192,7 @@ html, body {
     }
 
     .countdown-item {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -198,13 +202,13 @@ html, body {
     }
 
     .countdown-item {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
 
 @media only screen and (max-width: 991px) {
     .countdown-item {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -213,18 +217,20 @@ html, body {
         max-width: 90%;
     }
 
+    .countdown-item {
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 767px) and (max-aspect-ratio: 1 / 1) {
     .product-image-container {
         max-width: 50%;
-    }
-
-    .countdown-item {
-        font-size: 0.7rem;
     }
 }
 
 @media only screen and (max-width: 419px) {
     .countdown-item {
-        font-size: 0.5rem;
+        font-size: 0.4rem;
     }
 }
 
@@ -241,8 +247,14 @@ html, body {
     }
 }
 
-@media only screen and (min-width: 991px) and (min-aspect-ratio: 2 / 1) {
+@media only screen and (max-width: 991px) and (min-aspect-ratio: 2 / 1) {
     .countdown-item {
-        font-size: 1.2rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (min-width: 992px) and (min-aspect-ratio: 2 / 1) {
+    .countdown-item {
+        font-size: 0.9rem;
     }
 }
